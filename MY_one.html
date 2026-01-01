@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biko Profile</title>
+
+  <style>
+    *{
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background: #eeeeE0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    /* ===== Animation Box ===== */
+    .ani{
+      background: red;
+      width: 300px;
+      height: 150px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+    }
+
+    .ani p{
+      position: absolute;
+      margin: 0;
+    }
+
+    .ani0{
+      animation: opt 6s infinite;
+    }
+
+    .ani1{
+      animation: gio 6s infinite;
+    }
+
+    @keyframes opt{
+      0%{opacity: 1;}
+      40%{opacity: 1;}
+      50%{opacity: 0;}
+      100%{opacity: 0;}
+    }
+
+    @keyframes gio{
+      0%{opacity: 0;}
+      50%{opacity: 0;}
+      60%{opacity: 1;}
+      100%{opacity: 1;}
+    }
+
+    /* ===== Login Box ===== */
+    .bixi{
+      width: 300px;
+      background: #eefee0;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+      border-radius: 20px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .log{
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .inp{
+      width: 90%;
+      padding: 10px;
+      margin: 6px 0;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
+
+    button{
+      width: 45%;
+      padding: 10px;
+      margin: 5px;
+      border: none;
+      border-radius: 20px;
+      background: #200;
+      color: #50eeee;
+      cursor: pointer;
+    }
+
+    button:hover{
+      background: #400;
+    }
+
+    .Ac{
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      background: blue;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+    }
+
+    /* ===== Media Query ===== */
+
+    /* موبايل */
+    @media (max-width: 600px){
+      .ani{
+        width: 220px;
+        height: 110px;
+        font-size: 14px;
+      }
+
+      .bixi{
+        width: 95%;
+      }
+
+      button{
+        width: 90%;
+      }
+    }
+
+    /* تابلت */
+    @media (min-width: 601px) and (max-width: 900px){
+      .ani{
+        width: 260px;
+        height: 130px;
+      }
+
+      .bixi{
+        width: 70%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="ani">
+    <p class="ani0">
+      Welcome <br>
+      on Biko World
+    </p>
+
+    <p class="ani1">
+      I am Front-End Developer
+    </p>
+  </div>
+
+  <div class="bixi">
+    <p class="log">Login</p>
+
+    <input type="text" placeholder="Your name" id="cl" class="inp">
+    <input type="password" placeholder="Your password" id="cl2" class="inp">
+
+    <div>
+      <button>&#9993 Submit</button>
+      <button onclick="cle()"> &#215 Clear</button>
+    </div>
+
+    <a href="" id="ri" class="Ac" onclick="unv()">New Account</a>
+  </div>
+
+  <script>
+    function cle(){
+      document.getElementById("cl").value = "";
+      document.getElementById("cl2").value = "";
+    }
+    function unv(){
+      alert("Unavailability right now")
+      getElementById("ri").href=""
+    }
+    
+  </script>
+
+</body>
+</html>
